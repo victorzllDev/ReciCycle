@@ -1,67 +1,86 @@
 import { MdRecycling } from 'react-icons/md'
-import logoImg from '/src/assets/recicycle.png'
-import lixeiraImg from '/src/assets/lixeira.png'
+
+import Button from './components/Button'
+import ImagePoster from './components/ImagePoster'
+import Footer from './components/Footer'
+
+import { posters } from './services/path.js'
+const [poster1, poster2, poster3, poster4, poster5] = posters
+
+import logoImg from '/src/assets/logoImg.png'
 
 function App() {
 	return (
 		<>
-			<section className="flex h-screen w-full flex-col gap-2 bg-[url('/src/assets/fundo.jpg')] bg-cover bg-center p-2">
-				<header className="flex h-16 w-full items-center justify-center">
-					<img src={logoImg} alt="logo" className="h-full" />
-				</header>
-				<div className="mx-auto flex h-full max-w-xl flex-col items-start justify-center gap-3 text-white min-[420px]:items-center min-[420px]:text-center">
-					<h1 className="text-5xl font-medium">ReciCycle</h1>
-					<p className="font-light leading-5">
-						Unindo Comunidades, Reciclando Recursos e Preservando o Meio
-						Ambiente para um Amanhã Melhor
+			<main>
+				{/* section 1 */}
+				<section className="relative z-10 flex h-screen flex-col items-start justify-center gap-1 bg-[url('/src/assets/fundo.jpg')] bg-cover bg-center px-7 py-3 sm:items-center">
+					<header className="absolute left-1/2 top-0 flex w-full max-w-screen-sm -translate-x-1/2 items-center justify-between px-7 py-1 duration-200 sm:top-3 sm:rounded-full sm:bg-[rgba(200,200,200,.18)] sm:backdrop-blur-sm">
+						<MdRecycling size={20} />
+						<img src={logoImg} alt="logo" className="m-1 h-12" />
+						<MdRecycling size={20} />
+					</header>
+					<div className="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full bg-gradient-radial from-transparent to-black" />
+					<h1 className="text-start text-3xl font-light sm:text-center sm:text-4xl md:text-6xl">
+						Seja bem-vindo à ReciCycle!
+					</h1>
+					<p className="mb-12 text-start text-sm font-light sm:text-center md:text-lg">
+						Onde o compromisso ambiental encontra a inovação. Cuidado
+						excepcional para um futuro sustentável.
 					</p>
-					<button className="mt-6 flex min-w-[200px] items-center justify-center gap-2 rounded bg-sky-600 px-6 py-4 text-2xl uppercase">
-						Participe
-						<MdRecycling size={28} />
-					</button>
-				</div>
-			</section>
-			<section className=" px-2 py-4 text-white">
-				<div className="mx-auto flex h-full  flex-col flex-wrap items-center justify-around gap-4 min-[916px]:flex-row">
-					<p className="max-w-md text-justify">
-						A Recycle, nossa empresa dedicada à reciclagem de materiais
-						sustentáveis, tem como missão ambiental transformar Montes Claros em
-						uma cidade mais verde e limpa. Por meio da distribuição estratégica
-						de nossas lixeiras recicláveis, buscamos conscientizar e unir a
-						comunidade na coleta de materiais recicláveis, como metal, papel e
-						plástico, reforçando nosso compromisso com um futuro mais
-						sustentável para todos. Além disso, comprometemo-nos a doar
-						integralmente o dinheiro recebido com a reciclagem para iniciativas
-						e projetos de preservação ambiental.
+					<Button onClick={() => scrollToDiv('section-2')}>
+						Conheça-nos Agora
+					</Button>
+				</section>
+				{/* section 2 */}
+				<section
+					id="section-2"
+					className="flex min-h-screen flex-col justify-center px-7 py-24 md:items-center"
+				>
+					<span className="mb-7 flex flex-col items-center gap-4 before:h-12 before:w-0.5 before:bg-zinc-500">
+						<MdRecycling className="text-5xl" />
+					</span>
+					<h1 className="font-regular text-start text-3xl sm:text-center sm:text-4xl lg:text-5xl">
+						Bem-vindo à nossa Empresa
+					</h1>
+					<p className="mb-9 max-w-4xl text-start text-sm font-light sm:text-center">
+						A ReciCycle tem sido uma força na preservação ambiental. Utilizamos
+						materiais recicláveis para criar lixeiras e vendemos os materiais
+						reciclados, doando integralmente os lucros. Nossa missão é
+						transformar o lixo em recursos valiosos para um planeta mais
+						sustentável.
 					</p>
-					<MdRecycling size={32} className="text-green-400" />
-					<img src={lixeiraImg} alt="lixeira" className="w-96" />
-				</div>
-			</section>
-			<section className="px-2 py-8">
-				<p className="mb-6 text-center text-2xl font-bold text-white">
-					Atenção ao jogar os lixos na lixeiras!
-				</p>
-				<div className="mx-auto flex max-w-md flex-col items-center justify-center gap-4 min-[716px]:max-w-none min-[716px]:flex-row">
-					<div className="flex h-40 w-full  flex-col items-center justify-center gap-3 rounded  bg-blue-500">
-						<MdRecycling size={42} />
-						<p className="text-2xl uppercase">Papel</p>
+					<div className="grid h-auto w-full max-w-4xl grid-cols-3 grid-rows-2 gap-1 rounded bg-zinc-800 p-2">
+						<div className="row-span-2">
+							<ImagePoster img={poster1} />
+						</div>
+						<div>
+							<ImagePoster img={poster2} />
+						</div>
+						<div>
+							<ImagePoster img={poster3} />
+						</div>
+						<div>
+							<ImagePoster img={poster4} />
+						</div>
+						<div>
+							<ImagePoster img={poster5} />
+						</div>
 					</div>
-					<div className="flex h-40 w-full  flex-col items-center justify-center gap-3 rounded  bg-red-500">
-						<MdRecycling size={42} />
-						<p className="text-2xl uppercase">plástico</p>
-					</div>
-					<div className="flex h-40 w-full flex-col items-center justify-center gap-3 rounded   bg-yellow-500">
-						<MdRecycling size={42} />
-						<p className="text-2xl uppercase">Metal</p>
-					</div>
-				</div>
-			</section>
-			<footer className="w-full bg-zinc-950 px-2 py-4 text-center text-white">
-				<p>todos direitos reservado.</p>
-			</footer>
+				</section>
+			</main>
+			<Footer />
 		</>
 	)
+}
+
+function scrollToDiv(divId) {
+	let div = document.getElementById(divId)
+	div.scrollIntoView({ behavior: 'smooth' })
+}
+
+function redirectToURL(url) {
+	window.open(url, '_blank')
 }
 
 export default App

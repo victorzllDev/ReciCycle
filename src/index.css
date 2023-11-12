@@ -4,8 +4,14 @@
 
 * {
 	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
 }
 
 body {
-	background-color: #222222;
+	background: #141414;
+	color: #fff;
+}
+
+img {
+	pointer-events: none;
 }
