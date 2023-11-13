@@ -4,5 +4,14 @@ import poster2 from '/src/assets/postes/poster-2.jpg'
 import poster3 from '/src/assets/postes/poster-3.jpg'
 import poster4 from '/src/assets/postes/poster-4.jpeg'
 import poster5 from '/src/assets/postes/poster-5.jpg'
+// PATH DAS LOGO DOS PATROCINADORES
+import sponsorship1 from '/src/assets/sponsorship/planetChurros.jpg'
 
-export const posters = [poster1, poster2, poster3, poster4, poster5]
+export const posters = {
+	poster1,
+	poster2,
+	poster3,
+	poster4,
+	poster5,
+	sponsorship1,
+}
