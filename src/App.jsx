@@ -116,7 +116,7 @@ function App() {
 						<div className="flex flex-1 flex-col items-start justify-start gap-2">
 							<p className="text-xl">Data</p>
 							<ul className="font-light">
-								<li>22, de Novembro</li>
+								<li>28, de Novembro</li>
 							</ul>
 						</div>
 					</div>
