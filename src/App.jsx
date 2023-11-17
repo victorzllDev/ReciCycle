@@ -6,7 +6,15 @@ import ImagePoster from './components/ImagePoster'
 import Footer from './components/Footer'
 
 import { posters } from './services/path.js'
-const { poster1, poster2, poster3, poster4, poster5, sponsorship1 } = posters
+const {
+	poster1,
+	poster2,
+	poster3,
+	poster4,
+	poster5,
+	sponsorship1,
+	sponsorship2,
+} = posters
 
 import logoImg from '/src/assets/logoImg.png'
 
@@ -131,15 +139,27 @@ function App() {
 						ser utilizado em qualquer um dos estabelecimentos dos nossos
 						patrocinadores.
 					</p>
-					<div className="flex w-full flex-wrap items-center justify-center gap-3">
-						<Sponsorship
-							onClick={() =>
-								redirectToURL('https://instagram.com/planetchurross')
-							}
-							img={sponsorship1}
-							name="Planet churros"
-							description="Churros quentinho, doce sabor, felicidade em cada mordida."
-						/>
+					<div className="flex flex-wrap gap-3">
+						<div className="flex w-full flex-wrap items-center justify-center gap-3">
+							<Sponsorship
+								onClick={() =>
+									redirectToURL('https://instagram.com/planetchurross')
+								}
+								img={sponsorship1}
+								name="Planet churros"
+								description="Churros quentinho, doce sabor, felicidade em cada mordida."
+							/>
+						</div>
+						<div className="flex w-full flex-wrap items-center justify-center gap-3">
+							<Sponsorship
+								onClick={() =>
+									redirectToURL('https://instagram.com/genios_gourmet')
+								}
+								img={sponsorship2}
+								name="Genios Gourmet"
+								description="Geladinho gourmet, frescor congelante, explosão de sabores."
+							/>
+						</div>
 					</div>
 				</section>
 			</main>

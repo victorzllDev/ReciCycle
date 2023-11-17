@@ -6,6 +6,7 @@ import poster4 from '/src/assets/postes/poster-4.jpeg'
 import poster5 from '/src/assets/postes/poster-5.jpg'
 // PATH DAS LOGO DOS PATROCINADORES
 import sponsorship1 from '/src/assets/sponsorship/planetChurros.jpg'
+import sponsorship2 from '/src/assets/sponsorship/geniosGourmet.jpg'
 
 export const posters = {
 	poster1,
@@ -14,4 +15,5 @@ export const posters = {
 	poster4,
 	poster5,
 	sponsorship1,
+	sponsorship2,
 }
