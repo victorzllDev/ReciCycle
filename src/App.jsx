@@ -135,7 +135,7 @@ function App() {
 						Patrocinadores
 					</h2>
 					<p className="mb-9 max-w-5xl text-start text-sm font-light min-[440px]:text-center">
-						Apresentando o panfleto, você terá direito a um desconto que pode
+						Apresentando o panfleto, você terá direito a um desconto de 10% que pode
 						ser utilizado em qualquer um dos estabelecimentos dos nossos
 						patrocinadores.
 					</p>
